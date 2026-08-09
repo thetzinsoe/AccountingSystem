@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Accounting.App/Accounting.App.csproj" />
+  <Project Path="Accounting.Dao/Accounting.Dao.csproj" />
+  <Project Path="Accounting.Service/Accounting.Service.csproj" />
+</Solution>
