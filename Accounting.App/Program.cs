@@ -1,3 +1,4 @@
+using Accounting.App.Extensions;
 using Accounting.App.Middlewares;
 using Accounting.Dao.Context;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
+
+builder.Services.AddControllers();
+builder.Services.AddApplicationServices();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found!");
@@ -36,5 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();

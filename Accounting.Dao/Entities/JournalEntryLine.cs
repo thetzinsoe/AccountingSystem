@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Accounting.Dao.Entities
+﻿namespace Accounting.Dao.Entities
 {
     public class JournalEntryLine
     {
-        public Guid JournalEntryLineId {  get; set; }
+        public Guid JournalEntryLineId { get; set; }
         public Guid JournalEntryId { get; set; }
         public Guid AccountId { get; set; }
         public decimal DebitAmount { get; set; }

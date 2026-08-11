@@ -14,6 +14,8 @@ namespace Accounting.Dao.EntityConfigurations
             builder.Property(e => e.Description).IsRequired().HasColumnType("text");
             builder.Property(e => e.CreatedAt).IsRequired().HasDefaultValueSql("now()");
 
+            builder.Property(e => e.IsDeleted).IsRequired().HasDefaultValue(false);
+
             builder.HasIndex(e => e.VoucherNo).IsUnique();
         }
     }

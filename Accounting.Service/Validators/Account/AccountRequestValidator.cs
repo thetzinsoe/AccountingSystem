@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Accounting.Dao.Entities;
+using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
